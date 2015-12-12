@@ -6,7 +6,7 @@ var taskCount = {};
 
 var updateDateTaskCount = function(dateString) {
   if (dateString in taskCount) {
-    taskCount[dateString] ++;
+    taskCount[dateString] += 1;
   } else {
     taskCount[dateString] = 1;
   }
@@ -24,6 +24,7 @@ fs.readFile('report.txt', function(err, data) {
     var task = lines[i+1];
     updateDateTaskCount(dateString);
   }
+  console.log(taskCount);
   startApplication();
 });
 
@@ -86,7 +87,7 @@ var startApplication = function() {
 
   var startPomodori = function(date, task, min) {
     setTimer(min*60, 'Working time: ', function() {
-      fs.appendFile('report.txt', date.toString() + '\n' + task + ' in ' + min + ' minute(s)', function(err) {
+      fs.appendFile('report.txt', date.toString() + '\n' + task + ' in ' + min + ' minute(s)\n', function(err) {
         if (err) {
           console.log('Error: '.red + err);
         }
