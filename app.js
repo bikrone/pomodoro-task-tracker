@@ -24,7 +24,6 @@ fs.readFile('report.txt', function(err, data) {
     var task = lines[i+1];
     updateDateTaskCount(dateString);
   }
-  console.log(taskCount);
   startApplication();
 });
 
