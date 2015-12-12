@@ -1,0 +1,20 @@
+{
+  "name": "pomodori-task-tracker",
+  "version": "0.0.1",
+  "description": "Pomodori is an application that track your work progress based on Pomodori method. You will be working focusly each 25 minute, then take a break for 5 minutes. After every 4 pomodori, you take a longer break, usually 15 minutes (you can set yourself). Target for each wee may varies from 50-55 pomodori (6-10 each day).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pomodori",
+    "task",
+    "work"
+  ],
+  "author": "Khanh H. Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "play-sound": "0.0.7",
+  }
+}
